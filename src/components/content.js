@@ -19,7 +19,9 @@ class Content extends React.Component {
   render() {
     return (
       <div>
-        <p></p>
+        {this.state.movies.map((movie) => {
+          return <p>{movie.id}</p>;
+        })}
       </div>
     );
   }
