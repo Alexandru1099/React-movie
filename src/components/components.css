@@ -1,0 +1,13 @@
+#root {
+    margin: 10px;
+}
+
+.navbar{
+    background-color: mediumaquamarine;
+    height: 100px;
+}
+
+.search{
+    border-color: transparent;
+    border-radius: 20px;
+}
