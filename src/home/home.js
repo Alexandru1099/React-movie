@@ -1,11 +1,11 @@
 import Navbar from "../components/navbar";
-import Content from "../components/content";
+import ListMovie from "../components/ListMovie";
 
 const Home = () => {
   return (
     <div className="home">
       <Navbar />
-      <Content />
+      <ListMovie />
     </div>
   );
 };
