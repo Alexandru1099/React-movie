@@ -22,7 +22,7 @@ class ListMovie extends React.Component {
     return (
       <div className="p-5">
         {this.state.movies.map((movie) => {
-          if (movie.photo === null){
+          if (movie.photo === null) {
             movie.photo = "https://picsum.photos/200";
           }
           return (
@@ -31,14 +31,26 @@ class ListMovie extends React.Component {
               <div className="card-body">
                 <h6 className="text-primary card-title">{movie.title}</h6>
                 <p className="text-muted card-text">{movie.context}</p>
-                <p className="text-muted card-text">Starring: ... nu ceva </p>
+                <p className="text-muted card-text">
+                  Starring:{movie.starring}
+                </p>
               </div>
               <div className="m-4 col-auto">
-                <p className="text-muted text-end m-0">Releses: 2022</p>
-                <p className="text-muted text-end m-0">Content: R</p>
-                <p className="text-muted text-end m-0">Runtime: 1h32mins</p>
+                <p className="text-muted text-end m-0">
+                  Releses: {movie.releses}
+                </p>
+                <p className="text-muted text-end m-0">
+                  Content: {movie.content}
+                </p>
+                <p className="text-muted text-end m-0">
+                  Runtime: {movie.runtime}
+                </p>
               </div>
-              <Chip style={{backgroundColor: 'mediumaquamarine'}} className="text-white fs-4 mt-4" label="+"/>
+              <Chip
+                style={{ backgroundColor: "mediumaquamarine" }}
+                className="text-white fs-4 mt-4"
+                label="+"
+              />
             </div>
           );
         })}
