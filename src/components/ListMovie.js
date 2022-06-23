@@ -20,22 +20,25 @@ class ListMovie extends React.Component {
   }
   render() {
     return (
-      <div className="card mt-4">
+      <div className="p-5">
         {this.state.movies.map((movie) => {
+          if (movie.photo === null){
+            movie.photo = "https://picsum.photos/200";
+          }
           return (
-            <div className="card flex-row">
-              <img src="" className="card-img-left" alt="..." />
+            <div className="card flex-row border-0">
+              <img src={movie.photo} className="mt-3 card-img-left" alt="..." />
               <div className="card-body">
                 <h6 className="text-primary card-title">{movie.title}</h6>
                 <p className="text-muted card-text">{movie.context}</p>
                 <p className="text-muted card-text">Starring: ... nu ceva </p>
               </div>
               <div className="m-4 col-auto">
-                <p className="text-muted text-end">Releses: 2022</p>
-                <p className="text-muted text-end">Content: R</p>
-                <p className="text-muted text-end">Runtime: 1h32mins</p>
+                <p className="text-muted text-end m-0">Releses: 2022</p>
+                <p className="text-muted text-end m-0">Content: R</p>
+                <p className="text-muted text-end m-0">Runtime: 1h32mins</p>
               </div>
-              <Chip className="badge fs-4 m-3" label="+" color="success" />
+              <Chip style={{backgroundColor: 'mediumaquamarine'}} className="text-white fs-4 mt-4" label="+"/>
             </div>
           );
         })}
