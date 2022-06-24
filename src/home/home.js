@@ -18,7 +18,7 @@ class Home extends React.Component {
   }
   setMovie(a) {
     console.log(a);
-    // Setstate({ refMovie: a});
+    this.Setstate({ refMovie: a});
     // this.refMovie = a;
   }
   render() {
