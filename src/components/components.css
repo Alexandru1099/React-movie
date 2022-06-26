@@ -16,11 +16,19 @@
   background-color: mediumaquamarine;
 }
 
-.card-img-left{
+.card-img-left {
   width: 70px;
   height: 120px;
 }
 
-.css-14jg5j8-MuiChip-root{
-background-color: mediumaquamarine;
+.css-14jg5j8-MuiChip-root {
+  background-color: mediumaquamarine;
+}
+
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

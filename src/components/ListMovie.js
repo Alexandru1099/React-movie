@@ -1,5 +1,6 @@
 import React from "react";
 import "./components.css";
+import NOIMG from "../images/no-image.png";
 import { Chip } from "@mui/material";
 
 class ListMovie extends React.Component {
@@ -14,19 +15,19 @@ class ListMovie extends React.Component {
     const url = "http://localhost:3000/article";
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     this.setState({ movies: data });
-    console.log(this.state.movies);
+    // console.log(this.state.movies);
   }
   render() {
     return (
       <div className="p-5">
         {this.state.movies.map((movie) => {
           if (movie.photo === null) {
-            movie.photo = "https://picsum.photos/200";
+            movie.photo = NOIMG;
           }
           return (
-            <div className="card flex-row border-0">
+            <div key={movie.id} className="card flex-row border-0">
               <img src={movie.photo} className="mt-3 card-img-left" alt="..." />
               <div className="card-body">
                 <h6 className="text-primary card-title">{movie.title}</h6>
@@ -55,14 +56,6 @@ class ListMovie extends React.Component {
           );
         })}
       </div>
-      //   <div class="card">
-      //   <img class="card-img-top" src="..." alt="Card image cap">
-      //   <div class="card-body">
-      //     <h5 class="card-title">Card title</h5>
-      //     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      //     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      //   </div>
-      // </div>
     );
   }
 }
