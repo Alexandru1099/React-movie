@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Home from "./pages/home";
-import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
+import { BrowserRouter as Route, Routes, Router, Link } from "react-router-dom";
 
 class App extends Component {
   constructor(data) {
@@ -13,10 +13,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Home />
-        {/* <Router>
-          <Route exact path="/" element={<Home />} />
-        </Router> */}
+        {/* <Routes> */}
+        <div>
+          <Home />
+        </div>
+        {/* </Routes> */}
       </div>
     );
   }
