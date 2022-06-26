@@ -1,6 +1,6 @@
 import React from "react";
 import "./components.css";
-import NOIMG from '../images/no-image.png'
+import NOIMG from "../images/no-image.png";
 import { Chip } from "@mui/material";
 
 class ListMovie extends React.Component {
@@ -24,7 +24,7 @@ class ListMovie extends React.Component {
       <div className="p-5">
         {this.state.movies.map((movie) => {
           if (movie.photo === null) {
-            movie.photo =  NOIMG ;
+            movie.photo = NOIMG;
           }
           return (
             <div key={movie.id} className="card flex-row border-0">
