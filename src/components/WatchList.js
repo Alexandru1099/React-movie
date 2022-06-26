@@ -1,9 +1,9 @@
 import React from "react";
 
 class WatchList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  //   constructor(props) {
+  //     super(props);
+  //   }
   state = {
     watchList: [],
   };

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Home from "./home/home";
+import Home from "./pages/home";
+import { BrowserRouter, Route, Switch, Router } from "react-router-dom";
 
 class App extends Component {
   constructor(data) {
@@ -13,10 +14,10 @@ class App extends Component {
     return (
       <div>
         <Home />
+        {/* <Router>
+          <Route exact path="/" element={<Home />} />
+        </Router> */}
       </div>
-      //   <div  className="w-100 text-center">
-      //     <h1>{this.state.msg}</h1>
-      //   </div>
     );
   }
 }
