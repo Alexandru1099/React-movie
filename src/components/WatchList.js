@@ -9,14 +9,14 @@ class WatchList extends React.Component {
   };
   render() {
     return (
-      <div class="footer">
-        <div class="mb-2 card bg-light text-dark float-end position-relativ m-3">
-          <div class="card-header">
+      <div className="mb-2 card bg-light text-dark float-end position-relativ m-3">
+        <div className="footer">
+          <div className="card-header">
             <h2>Watchlist</h2>
           </div>
-          <div class="card-body">
-            <p class="card-text m-0">Your watchlist is empty.</p>
-            <p class="card-text">You should add some movies!</p>
+          <div className="card-body">
+            <p className="card-text m-0">Your watchlist is empty.</p>
+            <p className="card-text">You should add some movies!</p>
           </div>
         </div>
       </div>
