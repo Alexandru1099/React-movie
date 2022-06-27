@@ -12,7 +12,7 @@ class WatchList extends React.Component {
   render() {
     return (
       <CFooter>
-       <div className="footer mb-2 card text-dark m-3">
+       <div className="mb-2 card text-dark m-3">
            <div className="card-header">
              <h2>Watchlist</h2>
            </div>
