@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Home from "./home/home";
+import Home from "./pages/Home";
+import { Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import Recomandation from "./pages/Recomandation";
 
 class App extends Component {
   constructor(data) {
@@ -12,11 +16,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Home />
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/recomandation" exact>
+              <Recomandation />
+            </Route>
+          </Switch>
+        </BrowserRouter>
       </div>
-      //   <div  className="w-100 text-center">
-      //     <h1>{this.state.msg}</h1>
-      //   </div>
     );
   }
 }
