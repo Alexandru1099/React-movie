@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import ListMovie from "../components/ListMovie";
 import WatchList from "../components/WatchList";
+import { LocalLaundryService } from "@mui/icons-material";
 
 class Home extends React.Component {
   constructor(props) {
