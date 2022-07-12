@@ -27,10 +27,8 @@
 
 .footer {
   margin-top: 1rem;
-  padding: 0;
-  position: sticky;
-  bottom: 15px;
-  left: 70%;
-  width: 30%;
-  background-color: white;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
