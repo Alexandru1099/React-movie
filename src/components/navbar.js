@@ -3,9 +3,9 @@ import "./components.css";
 import { Link } from "react-router-dom";
 
 class Navbar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   searchMovie(movie) {
     console.log(movie);
     this.props.refMovie = movie;
