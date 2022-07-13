@@ -13,10 +13,8 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className="navbar w-100">
-        <Link to="/recomandation">
-          <div>
+        <Link to="/signin">
             <p>ceva</p>
-          </div>
         </Link>
         <span className="text-white m-4 fs-3">Welcome to RVmDB</span>
         <input

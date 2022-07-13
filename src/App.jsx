@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import { Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
-import Recomandation from "./pages/Recomandation";
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
 
 class App extends Component {
   constructor(data) {
@@ -19,10 +20,13 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact>
-              <Home />
+              <HomePage />
             </Route>
-            <Route path="/recomandation" exact>
-              <Recomandation />
+            <Route path="/signin" exact>
+              <SignInPage />
+            </Route>
+            <Route path="/signup" exact>
+              <SignUpPage />
             </Route>
           </Switch>
         </BrowserRouter>
