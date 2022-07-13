@@ -87,14 +87,14 @@ const SignIn = () => {
                 </div>
                 <div className="actions">
                     {!isLoading && (
-                        <button>Login</button>
+                        <button 
+                        onClick={submitHandler}>Login</button>
                     )}
                     {isLoading && <p>Sending request...</p>}
                     <Link to='/signup'>
                         <button
                             type='button'
                             className="toggle"
-                        // onClick={
                         >Create new account
                         </button>
                     </Link>

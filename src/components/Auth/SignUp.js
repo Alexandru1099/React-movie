@@ -32,14 +32,16 @@ const SignUp = () => {
 
         setIsLoading(true);
         let url =
-            'http://localhost:3000/signin';
+            'http://localhost:3000/user';
 
         fetch(url, {
             method: 'POST',
             body: JSON.stringify({
                 email: enteredEmail,
                 password: enteredPassword,
-                returnSecureToken: true,
+                name: enteredName,
+                gender: enteredGender,
+                age: enteredAge,
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -61,6 +63,7 @@ const SignUp = () => {
                 }
             })
             .then((data) => {
+                history.replace('/')
                 const expirationTime = new Date(
                     new Date().getTime() + +data.expiresIn * 1000
                 );
@@ -103,7 +106,8 @@ const SignUp = () => {
                 </div>
                 <div className="actions">
                     {!isLoading && (
-                        <button>Create Account</button>
+                        <button 
+                        onClick={submitHandler}>Create Account</button>
                     )}
                     {isLoading && <p>Sending request...</p>}
                     <Link to='/signin'>
