@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
+import Recomandation from "./pages/Recomandation";
 
 class App extends Component {
   constructor(data) {
@@ -21,6 +22,9 @@ class App extends Component {
           <Switch>
             <Route path="/" exact>
               <HomePage />
+            </Route>
+            <Route path="/recomandation/:id" exact>
+              <Recomandation />
             </Route>
             <Route path="/signin" exact>
               <SignInPage />

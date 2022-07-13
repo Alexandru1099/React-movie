@@ -2,6 +2,7 @@ import React from "react";
 import "./components.css";
 import NOIMG from "../images/no-image.png";
 import { Chip } from "@mui/material";
+import { Link } from "react-router-dom";
 
 class ListMovie extends React.Component {
   constructor(props) {
@@ -30,7 +31,9 @@ class ListMovie extends React.Component {
             <div key={movie.id} className="card flex-row border-0">
               <img src={movie.photo} className="mt-3 card-img-left" alt="..." />
               <div className="card-body">
-                <h6 className="text-primary card-title">{movie.title}</h6>
+                <Link to={`/recomandation/${movie.id}`}>
+                  <h6 className="text-primary card-title">{movie.title}</h6>
+                </Link>
                 <p className="text-muted card-text">{movie.context}</p>
                 <p className="text-muted card-text">
                   Starring:{movie.starring}
