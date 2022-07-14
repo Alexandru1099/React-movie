@@ -22,8 +22,8 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="home">
-        <Navbar refMovie={this.refMovie} setFunction={this.setMovie} />
-        <ListMovie refMovie={this.refMovie} />
+        <Navbar />
+        <ListMovie />
         <WatchList />
       </div>
     );

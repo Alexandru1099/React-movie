@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import SelectMovie from "../components/SelectMovie";
+import WatchList from "../components/WatchList";
 
 const SelectMoviePage = () => {
   const params = useParams();
@@ -40,6 +41,7 @@ const SelectMoviePage = () => {
     <div>
       <Navbar />
       <SelectMovie />
+      <WatchList />
     </div>
   );
 };

@@ -9,8 +9,8 @@ class WatchList extends React.Component {
   };
   render() {
     return (
-      <div className="mb-2 card bg-light text-dark float-end position-relativ m-3">
-        <div className="footer">
+      <div className="float-end footer m-2 ">
+        <div className="card">
           <div className="card-header">
             <h2>Watchlist</h2>
           </div>
