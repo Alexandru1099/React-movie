@@ -31,7 +31,7 @@ class ListMovie extends React.Component {
             <div key={movie.id} className="card flex-row border-0">
               <img src={movie.photo} className="mt-3 card-img-left" alt="..." />
               <div className="card-body">
-                <Link to={`/recomandation/${movie.id}`}>
+                <Link to={`/movie/${movie.id}`}>
                   <h6 className="text-primary card-title">{movie.title}</h6>
                 </Link>
                 <p className="text-muted card-text">{movie.context}</p>

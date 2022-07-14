@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import SelectMovie from "../components/SelectMovie";
 
-const Recomandation = () => {
+const SelectMoviePage = () => {
   const params = useParams();
   const [data, setData] = useState({});
-  console.log(params.id);
-  const para = params.id;
-  fetch(`http://localhost:3000/article/${para}`, {
+  // const isAuth = useSelector(state => state.auth.authentication)
+  fetch(`http://localhost:3000/article/${params.id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -35,6 +36,11 @@ const Recomandation = () => {
     .catch((err) => {
       alert(err.message);
     });
-  return <Navbar />;
+  return (
+    <div>
+      <Navbar />
+      <SelectMovie />
+    </div>
+  );
 };
-export default Recomandation;
+export default SelectMoviePage;
