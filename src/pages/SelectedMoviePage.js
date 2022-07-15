@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import SelectMovie from "../components/SelectMovie";
-import WatchList from "../components/WatchList";
+import SelectMovie from "../components/SelectMovie/SelectMovie";
+import WatchList from "../components/WatchList/WatchList";
 
 const SelectMoviePage = () => {
   const params = useParams();

@@ -24,13 +24,3 @@
 .css-14jg5j8-MuiChip-root {
   background-color: mediumaquamarine;
 }
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 250px;
-  background-color: white;
-  color: black;
-  position: sticky;
-}

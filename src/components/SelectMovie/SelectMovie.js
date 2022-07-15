@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import "./components.css";
+import "../components.css";
 import "./selectedMovie.css";
 import { Chip } from "@mui/material";
-import photoMovie from "../images/no-image.png";
+import photoMovie from "../../images/no-image.png";
 
 const SelectMovie = () => {
   return (

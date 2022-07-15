@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import ListMovie from "../components/ListMovie";
-import WatchList from "../components/WatchList";
+import WatchList from "../components/WatchList/WatchList";
 import { LocalLaundryService } from "@mui/icons-material";
 
 class HomePage extends React.Component {

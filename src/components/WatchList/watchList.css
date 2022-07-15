@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom:20px;
+    width: 250px;
+    background-color: white;
+    color: black;
+    position: sticky;
+  }
+
+  .card-border {
+    border-radius: 33px!important;
+  }
+
+  .card-header:first-child {
+    border-radius: 33px;
+  }

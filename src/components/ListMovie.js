@@ -34,19 +34,19 @@ class ListMovie extends React.Component {
                 <Link to={`/movie/${movie.id}`}>
                   <h6 className="text-primary card-title">{movie.title}</h6>
                 </Link>
-                <p className="text-muted card-text">{movie.context}</p>
-                <p className="text-muted card-text">
+                <p className="text-muted card-text fs-14">{movie.context}</p>
+                <p className="text-muted card-text fs-14">
                   Starring:{movie.starring}
                 </p>
               </div>
               <div className="m-4 col-auto">
-                <p className="text-muted text-end m-0">
+                <p className="text-muted text-end m-0 fs-14">
                   Releses: {movie.releses}
                 </p>
-                <p className="text-muted text-end m-0">
+                <p className="text-muted text-end m-0 fs-14">
                   Content: {movie.content}
                 </p>
-                <p className="text-muted text-end m-0">
+                <p className="text-muted text-end m-0 fs-14">
                   Runtime: {movie.runtime}
                 </p>
               </div>
