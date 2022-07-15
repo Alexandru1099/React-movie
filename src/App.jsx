@@ -7,6 +7,7 @@ import { Switch } from "react-router-dom/cjs/react-router-dom.min";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import SelectMoviePage from "./pages/SelectedMoviePage";
+import RecomandationPage from "./pages/RecomandationPage";
 
 class App extends Component {
   constructor(data) {
@@ -31,6 +32,9 @@ class App extends Component {
             </Route>
             <Route path="/signup" exact>
               <SignUpPage />
+            </Route>
+            <Route path="/recomandation" exact>
+              <RecomandationPage />
             </Route>
           </Switch>
         </BrowserRouter>
