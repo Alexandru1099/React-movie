@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import SelectMovie from "../components/SelectMovie/SelectMovie";
+import SelectedMovie from "../components/SelectedMovie/SelectedMovie";
 import WatchList from "../components/WatchList/WatchList";
 
-const SelectMoviePage = () => {
+const SelectedMoviePage = () => {
   const params = useParams();
   const [data, setData] = useState({});
   // const isAuth = useSelector(state => state.auth.authentication)
@@ -40,9 +40,9 @@ const SelectMoviePage = () => {
   return (
     <div>
       <Navbar />
-      <SelectMovie />
+      <SelectedMovie />
       <WatchList />
     </div>
   );
 };
-export default SelectMoviePage;
+export default SelectedMoviePage;
