@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import ListMovie from "../components/ListMovie";
-import WatchList from "../components/WatchList";
+import WatchList from "../components/WatchList/WatchList";
 import { LocalLaundryService } from "@mui/icons-material";
 
-class Home extends React.Component {
+class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -22,11 +22,11 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <Navbar refMovie={this.refMovie} setFunction={this.setMovie} />
-        <ListMovie refMovie={this.refMovie} />
+        <Navbar />
+        <ListMovie />
         <WatchList />
       </div>
     );
   }
 }
-export default Home;
+export default HomePage;

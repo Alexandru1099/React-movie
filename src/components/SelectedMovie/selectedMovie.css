@@ -1,0 +1,22 @@
+.img {
+    max-height: 200px;
+}
+
+.card-text{
+    font-size:19px;
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    overflow: hidden;
+}
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14{
+    font-size: 14px;
+}
+
+.icon-add {
+    width: 40px;
+    background-color: mediumaquamarine!important;
+}

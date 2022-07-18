@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Home from "./home/home";
+import HomePage from "./pages/HomePage";
+import { Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
+import SelectMoviePage from "./pages/SelectedMoviePage";
+import RecomandationPage from "./pages/RecomandationPage";
 
 class App extends Component {
   constructor(data) {
@@ -12,11 +19,26 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Home />
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact>
+              <HomePage />
+            </Route>
+            <Route path="/movie/:id" exact>
+              <SelectMoviePage />
+            </Route>
+            <Route path="/signin" exact>
+              <SignInPage />
+            </Route>
+            <Route path="/signup" exact>
+              <SignUpPage />
+            </Route>
+            <Route path="/recomandation" exact>
+              <RecomandationPage />
+            </Route>
+          </Switch>
+        </BrowserRouter>
       </div>
-      //   <div  className="w-100 text-center">
-      //     <h1>{this.state.msg}</h1>
-      //   </div>
     );
   }
 }
