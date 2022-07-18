@@ -1,6 +1,6 @@
 import React from "react";
 import { Chip } from "@mui/material";
-import photoMovie from "../images/no-image.png";
+import photoMovie from "../images/Die_hard.jpg";
 
 const DetailsMovieSelected = () => {
   return (

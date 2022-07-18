@@ -7,7 +7,7 @@ import SimilarMovies from "../Recomandation/SimilarMovies";
 
 const SelectMovie = () => {
   return (
-    <section>
+    <section className="mx-5 mt-5">
       <DetailsMovieSelected />
       <SimilarMovies />
         <Link to='/recomandation'><p>recomandation</p></Link>
