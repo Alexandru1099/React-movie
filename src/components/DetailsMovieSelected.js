@@ -12,7 +12,7 @@ const DetailsMovieSelected = () => {
             <a href="#">Titlu film</a>
           </div>
           <div className="card-body row flex-nowrap">
-            <p className="col-7 card-text fs-14">
+            <p className="col-10 card-text fs-14">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

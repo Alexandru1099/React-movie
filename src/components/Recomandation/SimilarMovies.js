@@ -5,40 +5,20 @@ import photoMovie from "../../images/Die_hard.jpg";
 
 const SimilarMovies = () => {
     return (
-        <section className="container row">
-        <div className="col card w-75 p-0 border-0">
-          <div className="card-header border-0 bg-white pb-0">
-            <h4 href="#">Similar movie to FILM</h4>
+        <section className="col">
+        <div className="card w-100 p-0 border-0">
+          <div className="card-header border-0 bg-white p-0">
+            <h4 className="" href="#">Similar movie to FILM</h4>
           </div>
-          <div className="card-body row flex">
-            <img className="img-similar w-25 p-0" src={photoMovie} />
-            <a className="mt-3 col-2">Titlu film</a>
-            <div className="mt-3 mt-0 col-auto p-0">
-              <p className="text-muted text-end m-0 fs-14">
+          <div className="card-body d-flex flex-row px-0">
+            <img className="img-similar w-25 p-0 me-3" src={photoMovie} />
+            <a className="mt-3 me-3 col-3">Titlu film</a>
+            <div className="mt-3  p-0 me-1">
+              <p className="text-muted text-end me-3 fs-14 ">
                 Viewer: 2022
               </p>
             </div>
-            <div className="mt-2 mt-0 col-auto fs-4">
-              <Chip
-                className="text-white fs-4 icon-add"
-                label="+"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="col card w-75 p-0 border-0">
-          <div className="card-header border-0 bg-white pb-0">
-            <h4 href="#">Similar movie to FILM</h4>
-          </div>
-          <div className="card-body row flex">
-            <img className="img-similar w-25 p-0" src={photoMovie} />
-            <a className="mt-3 col-2">Titlu film</a>
-            <div className="mt-3 mt-0 col-auto p-0">
-              <p className="text-muted text-end m-0 fs-14">
-                Viewer: 2022
-              </p>
-            </div>
-            <div className="mt-2 mt-0 col-auto fs-4">
+            <div className="mt-2 fs-4">
               <Chip
                 className="text-white fs-4 icon-add"
                 label="+"
