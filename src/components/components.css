@@ -24,3 +24,13 @@
 .css-14jg5j8-MuiChip-root {
   background-color: mediumaquamarine;
 }
+.max-card {
+  overflow-y: auto;
+  max-width: 380px;
+  max-height: 450px;
+}
+
+.card-header-recommended {
+  font-size: 10px;
+  background-color: white;
+}

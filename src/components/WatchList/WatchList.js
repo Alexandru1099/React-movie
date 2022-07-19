@@ -12,7 +12,7 @@ class WatchList extends React.Component {
     return (
       <div className="float-end footer m-2 ">
         <div className="card card-border">
-          <div className="card-header">
+          <div className="card-header card-header-list">
             <h6>Watchlist</h6>
           </div>
           <div className="card-body">

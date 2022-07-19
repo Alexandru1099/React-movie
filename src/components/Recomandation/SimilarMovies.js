@@ -5,7 +5,7 @@ import photoMovie from "../../images/Die_hard.jpg";
 
 const SimilarMovies = () => {
     return (
-        <section className="col">
+        <section className="col px-0">
         <div className="card w-100 p-0 border-0">
           <div className="card-header border-0 bg-white p-0">
             <h4 className="" href="#">Similar movie to FILM</h4>

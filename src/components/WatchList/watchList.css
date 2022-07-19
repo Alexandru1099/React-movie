@@ -12,6 +12,6 @@
     border-radius: 33px!important;
   }
 
-  .card-header:first-child {
-    border-radius: 33px;
+  .card-header-list {
+    border-radius: 33px!important;
   }
