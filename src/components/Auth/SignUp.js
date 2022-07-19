@@ -31,7 +31,7 @@ const SignUp = () => {
     // optional: Add validation
 
     setIsLoading(true);
-    let url = "http://localhost:3000/auth/signup";
+    let url = "http://localhost:3000/user";
 
     fetch(url, {
       method: "POST",
