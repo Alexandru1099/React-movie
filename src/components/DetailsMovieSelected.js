@@ -5,7 +5,7 @@ import photoMovie from "../images/Die_hard.jpg";
 const DetailsMovieSelected = () => {
   return (
     <section>
-      <div className="row m-3">
+      <div className="row">
         <img className="img w-25 p-0" src={photoMovie} />
         <div className="card w-75 p-0 border-0">
           <div className="card-header border-0 bg-white pb-0">

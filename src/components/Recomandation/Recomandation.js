@@ -13,7 +13,9 @@ const Recomandation = () => {
                 choices of the concerned user and their preferences towards a domain-specific item, aka movie.</p>
             <div className="mx-5"><Navbar /></div>
             <div className="mx-5">
-                <DetailsMovieSelected />
+                <div className="m-4">
+                    <DetailsMovieSelected />
+                </div>
                 <div className="container row">
                     <SimilarMovies />
                     <SwitchCardRecomandation />
