@@ -27,7 +27,7 @@
 .max-card {
   overflow-y: auto;
   max-width: 380px;
-  max-height: 450px;
+  max-height: 320px;
 }
 
 .card-header-recommended {
