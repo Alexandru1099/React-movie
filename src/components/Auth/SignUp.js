@@ -1,8 +1,12 @@
 import { useState, useRef, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./AuthForm.css";
+import { useDispatch } from 'react-redux';
 
 const SignUp = () => {
+  const dispatch = useDispatch();
+
+
   const history = useHistory();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -15,12 +19,9 @@ const SignUp = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
-  //   const switchAuthModeHandler = () => {
-  //     setIsLogin((prevState) => !prevState);
-  //   };
-
   const submitHandler = (event) => {
     event.preventDefault();
+    // dispatch(authSlice.login());
 
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
