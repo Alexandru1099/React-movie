@@ -3,7 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 const authSlice = createSlice({
   name: "authentication",
-  initialState: false,
+  initialState: { authentication: false },
   reducers: {
     logout(state) {
       state.authentication = false;
@@ -14,6 +14,6 @@ const authSlice = createSlice({
   },
 });
 
-export const {login, logout} = authSlice.actions;
+export const { login, logout } = authSlice.actions;
 
-export default  authSlice.reducer; 
+export default authSlice.reducer;

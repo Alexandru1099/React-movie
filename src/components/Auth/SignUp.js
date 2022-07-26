@@ -1,11 +1,11 @@
 import { useState, useRef, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./AuthForm.css";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
+import { login } from "../../store/state";
 
 const SignUp = () => {
   const dispatch = useDispatch();
-
 
   const history = useHistory();
   const emailInputRef = useRef();
@@ -54,15 +54,12 @@ const SignUp = () => {
         } else {
           return res.json().then((data) => {
             let errorMessage = "Authentication failed!";
-            // if (data && data.error && data.error.message) {
-            //   errorMessage = data.error.message;
-            // }
-
             throw new Error(errorMessage);
           });
         }
       })
       .then((data) => {
+        dispatch(login());
         history.replace("/");
         const expirationTime = new Date(
           new Date().getTime() + +data.expiresIn * 1000

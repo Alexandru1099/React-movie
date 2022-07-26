@@ -8,8 +8,6 @@ import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import SelectMoviePage from "./pages/SelectedMoviePage";
 import RecomandationPage from "./pages/RecomandationPage";
-import { Provider } from "react-redux";
-import store from "./store/state";
 
 class App extends Component {
   constructor(data) {
