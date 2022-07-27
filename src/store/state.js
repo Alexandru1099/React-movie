@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { configureStore } from "@reduxjs/toolkit";
 
 const authSlice = createSlice({
   name: "authentication",

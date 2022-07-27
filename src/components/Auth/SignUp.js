@@ -21,7 +21,7 @@ const SignUp = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    // dispatch(authSlice.login());
+  // dispatch(authSlice.login());
 
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;

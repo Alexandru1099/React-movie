@@ -1,12 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./state";
-
-// const rootReducer = combineReducers({
-//   login, logout
-// });
+import dataReducer from "./movieDetails"
 
 const store = configureStore({
-  reducer: { authentication: authReducer },
+  reducer: { authentication: authReducer, data: dataReducer },
 });
 
 export default store;
