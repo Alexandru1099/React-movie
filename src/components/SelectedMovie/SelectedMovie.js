@@ -3,7 +3,6 @@ import { Link, useHistory } from "react-router-dom";
 import "../components.css";
 import "./selectedMovie.css";
 import { useSelector } from "react-redux/es/exports";
-import { Redirect } from "react-router-dom";
 import DetailsMovieSelected from "../DetailsMovieSelected";
 import SimilarMovies from "../Recomandation/SimilarMovies";
 
