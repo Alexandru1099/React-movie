@@ -1,29 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./components.css";
 import NOIMG from "../images/no-image.png";
+import { useSelector } from "react-redux/es/exports";
 import { Chip } from "@mui/material";
 import { Link } from "react-router-dom";
 
-class ListMovie extends React.Component {
-  constructor(props) {
-    super(props);
+const ListMovie = () => {
+  const searchMovie = useSelector((state) => state.searchMovie.movies.payload);
+  const [movies, setMovies] = useState([]);
 
-    this.state = {
-      movies: [],
-    };
-  }
-  async componentDidMount() {
-    const url = "http://localhost:3000/article";
-    const response = await fetch(url);
-    const data = await response.json();
-    // console.log(data);
-    this.setState({ movies: data });
-    // console.log(this.state.movies);
-  }
-  render() {
+  useEffect(() => {
+    async function fetchMovie() {
+        console.log(searchMovie);
+        const response = await fetch(`http://localhost:3000/article`);
+        const results = await response.json();
+        setMovies(results);
+        console.log(results);
+    }
+    fetchMovie();
+  }, []);
+
     return (
       <div className="p-5">
-        {this.state.movies.map((movie) => {
+        {movies.map((movie) => {
           if (movie.photo === null) {
             movie.photo = NOIMG;
           }
@@ -60,7 +59,6 @@ class ListMovie extends React.Component {
         })}
       </div>
     );
-  }
 }
 
 export default ListMovie;

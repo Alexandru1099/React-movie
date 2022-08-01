@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./components.css";
 import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import { logout } from "../store/state";
-import { useHistory } from "react-router-dom";
+import { searchMovies } from "../store/searchMovie";
 
 const Navbar = () => {
+  const params = useParams();
   const dispatch = useDispatch();
-  const history = useHistory;
+  const [searchMovie, setsearchMovie] = useState();
+  function search (e) {
+    dispatch(searchMovies(e));
+  }
   return (
     <div className="navbar w-100">
       <button onClick={() => dispatch(logout())}>
@@ -18,6 +23,7 @@ const Navbar = () => {
         type="text"
         placeholder="Search for a movie..."
         name="search"
+        onChange={e =>search(e.target.value)}
       />
     </div>
   );
