@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Chip } from "@mui/material";
-import photoMovie from "../images/Die_hard.jpg";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 
 const DetailsMovieSelected = () => {
   const params = useParams();
@@ -11,6 +8,7 @@ const DetailsMovieSelected = () => {
   const [title, setTitle] = useState();
   const [context, setContext] = useState();
   const [releases, setRelease] = useState();
+  const [starring, setStarring] = useState();
   const [content, setContent] = useState();
   const [runtime, setRuntime] = useState();
   fetch(`http://localhost:3000/article/${params.id}`, {
@@ -34,9 +32,14 @@ const DetailsMovieSelected = () => {
       }
     })
     .then((data) => {
+      console.log(data);
       setPhotoMovie(data.photo);
       setTitle(data.title);
       setContext(data.context);
+      setStarring(data.starring);
+      setContent(data.content);
+      setRuntime(data.runtime);
+      setRelease(data.release);
     })
     .catch((err) => {
       alert(err.message);
@@ -48,12 +51,12 @@ const DetailsMovieSelected = () => {
         <div className="card-body">
           <h6 className="text-primary card-title">{title}</h6>
           <p className="text-muted card-text fs-14">{context}</p>
-          <p className="text-muted card-text fs-14">Starring:Cineva Ciebac</p>
+          <p className="text-muted card-text fs-14">Starring:{starring}</p>
         </div>
         <div className="m-4 col-auto">
-          <p className="text-muted text-end m-0 fs-14">Releses: 1999</p>
-          <p className="text-muted text-end m-0 fs-14">Content: AAAAAA</p>
-          <p className="text-muted text-end m-0 fs-14">Runtime: 1H20</p>
+          <p className="text-muted text-end m-0 fs-14">Releses: {releases}</p>
+          <p className="text-muted text-end m-0 fs-14">Content: {content}</p>
+          <p className="text-muted text-end m-0 fs-14">Runtime: {runtime}</p>
         </div>
         <Chip
           style={{ backgroundColor: "mediumaquamarine" }}
