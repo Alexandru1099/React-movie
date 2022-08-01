@@ -18,9 +18,6 @@ const Navbar = () => {
         type="text"
         placeholder="Search for a movie..."
         name="search"
-        onChange={(e) => {
-          this.props.setFunction(e.target.value);
-        }}
       />
     </div>
   );
