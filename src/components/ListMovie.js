@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./components.css";
 import NOIMG from "../images/no-image.png";
 import { useSelector } from "react-redux/es/exports";
+import { useDispatch } from "react-redux";
 import { Chip } from "@mui/material";
 import { Link } from "react-router-dom";
+import { addWatchList } from "../store/watchList";
 
 const ListMovie = () => {
+  const dispatch = useDispatch();
+  const list = useSelector((state) => state.watchList.watchList);
   const searchMovie = useSelector((state) => state.searchMovie.movies.payload);
   const [movies, setMovies] = useState([]);
 
@@ -20,6 +24,10 @@ const ListMovie = () => {
     fetchMovie();
   }, [searchMovie]);
 
+  function ceva(e) {
+    console.log(e);
+    dispatch(addWatchList(e));
+  }
   return (
     <div className="p-5">
       {movies.map((movie) => {
@@ -50,6 +58,7 @@ const ListMovie = () => {
               </p>
             </div>
             <Chip
+              onClick={(e) => ceva(movie)}
               style={{ backgroundColor: "mediumaquamarine" }}
               className="text-white fs-4 mt-4"
               label="+"

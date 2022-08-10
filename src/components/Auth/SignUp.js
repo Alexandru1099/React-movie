@@ -56,6 +56,7 @@ const SignUp = () => {
       })
       .then((data) => {
         dispatch(login());
+        localStorage.setItem('authentication', true);
         history.replace("/");
       })
       .catch((err) => {

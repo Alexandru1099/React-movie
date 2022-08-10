@@ -6,12 +6,18 @@ import { searchMovies } from "../store/searchMovie";
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  function logout() {
+    localStorage.setItem("authentication", false);
+    window.location.reload();
+  }
   function search(e) {
     dispatch(searchMovies(e));
   }
   return (
     <div className="navbar w-100">
-      <button onClick={() => dispatch(logout())}>Logout</button>
+      <button type="button" className="btn btn-danger m-2" onClick={logout}>
+        Logout
+      </button>
       <span className="text-white m-4 fs-3">Welcome to RVmDB</span>
       <input
         className="search text-center mx-5"

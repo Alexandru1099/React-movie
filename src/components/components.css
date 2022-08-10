@@ -13,7 +13,7 @@
 }
 
 .badge {
-  background-color: mediumaquamarine;
+  background-color: mediumaquamarine !important;
 }
 
 .card-img-left {
@@ -33,4 +33,8 @@
 .card-header-recommended {
   font-size: 10px;
   background-color: white;
+}
+
+.btn-color {
+  background-color: mediumaquamarine !important;
 }

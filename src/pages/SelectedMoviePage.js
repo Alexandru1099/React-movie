@@ -6,7 +6,8 @@ import { useSelector } from "react-redux/es/exports";
 import { Redirect } from "react-router-dom";
 
 const SelectedMoviePage = () => {
-  const isAuth = useSelector((state) => state.authentication.authentication);
+  // const isAuth = useSelector((state) => state.authentication.authentication);
+  const isAuth = localStorage.getItem("authentication");
   console.log(isAuth);
 
   return (
