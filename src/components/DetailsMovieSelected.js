@@ -11,7 +11,7 @@ const DetailsMovieSelected = () => {
   const [starring, setStarring] = useState();
   const [content, setContent] = useState();
   const [runtime, setRuntime] = useState();
-  fetch(`http://localhost:3000/article/${params.id}`, {
+  fetch(`http://localhost:3000/movie/${params.id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
