@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
 import "../components.css";
 import "./selectedMovie.css";
 import { useSelector } from "react-redux/es/exports";
@@ -16,9 +15,6 @@ const SelectMovie = () => {
         <DetailsMovieSelected />
       </div>
       <SimilarMovies />
-      <Link to="/recomandation">
-        <p>recomandation</p>
-      </Link>
     </section>
   );
 };

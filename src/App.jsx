@@ -33,9 +33,7 @@ class App extends Component {
             <Route path="/signup" exact>
               <SignUpPage />
             </Route>
-            <Route path="/recomandation" exact>
-              <RecomandationPage />
-            </Route>
+            <Route path="/recomandation" component={RecomandationPage}></Route>
           </Switch>
         </BrowserRouter>
       </div>

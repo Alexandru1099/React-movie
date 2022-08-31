@@ -12,92 +12,92 @@ const ListMovie = () => {
   const list = useSelector((state) => state.watchList.watchList);
   const searchMovie = useSelector((state) => state.searchMovie.movies.payload);
   const [movies, setMovies] = useState([]);
+  const [message, setMessage] = useState(1);
 
   async function fetchMovie() {
-    console.log(searchMovie);
-    const response = await fetch(`http://localhost:3000/movie?search=${searchMovie == undefined ? '' : searchMovie}`);
+    const response = await fetch(`http://localhost:3000/movie${searchMovie == undefined  || searchMovie == '' ? '' : `?search=` + searchMovie}`);
     const results = await response.json();
     setMovies(results);
-    console.log(results);
-    console.log(movies.length);
+    results.message == 'No movies' ? setMessage(0) : setMessage(1);
   }
   useEffect(() => {
     fetchMovie();
   }, [searchMovie]);
 
   function ceva(e) {
-    console.log(e);
     dispatch(addWatchList(e));
   }
   return (
     <div className="p-5">
-      { movies.length > 1 ? movies.map((movie) => {
-        if (movie.photo === null) {
-          movie.photo = NOIMG;
-        }
-        return (
-          <div key={movie.id} className="card flex-row border-0">
-            <img src={movie.photo} className="mt-3 card-img-left" alt="..." />
-            <div className="card-body">
-              <Link to={`/movie/${movie.id}`}>
-                <h6 className="text-primary card-title">{movie.title}</h6>
-              </Link>
-              <p className="text-muted card-text fs-14">{movie.context}</p>
-              <p className="text-muted card-text fs-14">
-                Starring:{movie.starring}
-              </p>
+      {
+        message == 0 ? '' :
+        movies.length > 1 ? movies.map((movie) => {
+          if (movie.photo === null) {
+            movie.photo = NOIMG;
+          }
+          return (
+            <div key={movie.id} className="card flex-row border-0">
+              <img src={movie.photo} className="mt-3 card-img-left" alt="..." />
+              <div className="card-body">
+                <Link to={`/movie/${movie.id}`}>
+                  <h6 className="text-primary card-title">{movie.title}</h6>
+                </Link>
+                <p className="text-muted card-text fs-14">{movie.context}</p>
+                <p className="text-muted card-text fs-14">
+                  Starring:{movie.starring}
+                </p>
+              </div>
+              <div className="m-4 col-auto">
+                <p className="text-muted text-end m-0 fs-14">
+                  Releses: {movie.releses}
+                </p>
+                <p className="text-muted text-end m-0 fs-14">
+                  Content: {movie.content}
+                </p>
+                <p className="text-muted text-end m-0 fs-14">
+                  Runtime: {movie.runtime}
+                </p>
+              </div>
+              <Chip
+                onClick={(e) => ceva(movie)}
+                style={{ backgroundColor: "mediumaquamarine" }}
+                className="text-white fs-4 mt-4"
+                label="+"
+              />
             </div>
-            <div className="m-4 col-auto">
-              <p className="text-muted text-end m-0 fs-14">
-                Releses: {movie.releses}
-              </p>
-              <p className="text-muted text-end m-0 fs-14">
-                Content: {movie.content}
-              </p>
-              <p className="text-muted text-end m-0 fs-14">
-                Runtime: {movie.runtime}
-              </p>
+          );
+        }) :
+          (
+            <div key={movies.id} className="card flex-row border-0">
+              <img src={movies.photo} className="mt-3 card-img-left" alt="..." />
+              <div className="card-body">
+                <Link to={`/movie/${movies.id}`}>
+                  <h6 className="text-primary card-title">{movies.title}</h6>
+                </Link>
+                <p className="text-muted card-text fs-14">{movies.context}</p>
+                <p className="text-muted card-text fs-14">
+                  Starring:{movies.starring}
+                </p>
+              </div>
+              <div className="m-4 col-auto">
+                <p className="text-muted text-end m-0 fs-14">
+                  Releses: {movies.releses}
+                </p>
+                <p className="text-muted text-end m-0 fs-14">
+                  Content: {movies.content}
+                </p>
+                <p className="text-muted text-end m-0 fs-14">
+                  Runtime: {movies.runtime}
+                </p>
+              </div>
+              <Chip
+                onClick={(e) => ceva(movies)}
+                style={{ backgroundColor: "mediumaquamarine" }}
+                className="text-white fs-4 mt-4"
+                label="+"
+              />
             </div>
-            <Chip
-              onClick={(e) => ceva(movie)}
-              style={{ backgroundColor: "mediumaquamarine" }}
-              className="text-white fs-4 mt-4"
-              label="+"
-            />
-          </div>
-        );
-      }) : 
-       (
-        <div key={movies.id} className="card flex-row border-0">
-          <img src={movies.photo} className="mt-3 card-img-left" alt="..." />
-          <div className="card-body">
-            <Link to={`/movie/${movies.id}`}>
-              <h6 className="text-primary card-title">{movies.title}</h6>
-            </Link>
-            <p className="text-muted card-text fs-14">{movies.context}</p>
-            <p className="text-muted card-text fs-14">
-              Starring:{movies.starring}
-            </p>
-          </div>
-          <div className="m-4 col-auto">
-            <p className="text-muted text-end m-0 fs-14">
-              Releses: {movies.releses}
-            </p>
-            <p className="text-muted text-end m-0 fs-14">
-              Content: {movies.content}
-            </p>
-            <p className="text-muted text-end m-0 fs-14">
-              Runtime: {movies.runtime}
-            </p>
-          </div>
-          <Chip
-            onClick={(e) => ceva(movies)}
-            style={{ backgroundColor: "mediumaquamarine" }}
-            className="text-white fs-4 mt-4"
-            label="+"
-          />
-        </div>
-      )
+          )
       }
     </div>
   );
