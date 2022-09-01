@@ -56,7 +56,7 @@ const ListMovie = () => {
               </div>
               <div className="m-4 col-auto">
                 <p className="text-muted text-end m-0 fs-14">
-                  Releses: {movie.releses}
+                  Release: {movie.release}
                 </p>
                 <p className="text-muted text-end m-0 fs-14">
                   Content: {movie.content}
@@ -88,7 +88,7 @@ const ListMovie = () => {
           </div>
           <div className="m-4 col-auto">
             <p className="text-muted text-end m-0 fs-14">
-              Releses: {movies.releses}
+              Release: {movies.release}
             </p>
             <p className="text-muted text-end m-0 fs-14">
               Content: {movies.content}
