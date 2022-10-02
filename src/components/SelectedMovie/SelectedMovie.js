@@ -7,7 +7,6 @@ import SimilarMovies from "../Recomandation/SimilarMovies";
 
 const SelectMovie = () => {
   const isAuth = useSelector((state) => state.authentication.authentication);
-  console.log(isAuth);
   
   return (
     <section className="mx-5">

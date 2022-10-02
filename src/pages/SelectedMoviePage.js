@@ -4,11 +4,10 @@ import SelectedMovie from "../components/SelectedMovie/SelectedMovie";
 import WatchList from "../components/WatchList/WatchList";
 import { Link, useHistory } from "react-router-dom";
 import { Redirect } from "react-router-dom";
+import { Button, Chip } from "@mui/material";
 
 const SelectedMoviePage = () => {
-  // const isAuth = useSelector((state) => state.authentication.authentication);
   const isAuth = localStorage.getItem("authentication");
-  console.log(isAuth);
 
   return (
     <div>
@@ -17,9 +16,13 @@ const SelectedMoviePage = () => {
           <Navbar />
           <SelectedMovie />
           <WatchList />
-      <Link to={"/recomandation"}>
-        <p>recomandation</p>
-      </Link>
+          <Chip
+            label="Recomandation movie"
+            color="success"
+            component="a"
+            href="/recomandation"
+            clickable
+          />
         </section>
       ) : (
         <Redirect to="/signup" />

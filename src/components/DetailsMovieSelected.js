@@ -32,7 +32,6 @@ const DetailsMovieSelected = () => {
       }
     })
     .then((data) => {
-      console.log(data);
       setPhotoMovie(data.photo);
       setTitle(data.title);
       setContext(data.context);
