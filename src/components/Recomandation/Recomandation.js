@@ -1,3 +1,4 @@
+import { Chip } from "@mui/material";
 import React from "react";
 import DetailsMovieSelected from "../DetailsMovieSelected";
 import Navbar from "../navbar";

@@ -1,17 +1,18 @@
 .footer {
-    position: fixed;
-    left: 0;
-    bottom:20px;
-    width: 200px;
-    background-color: white;
-    color: black;
-    position: sticky;
-  }
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  width: 200px;
+  background-color: white;
+  color: black;
+  position: sticky;
+}
 
-  .card-border {
-    border-radius: 33px!important;
-  }
+.card-border {
+  border-radius: 33px !important;
+}
 
-  .card-header-list {
-    border-radius: 33px!important;
-  }
+.card-header-list {
+  border-radius: 33px !important;
+}

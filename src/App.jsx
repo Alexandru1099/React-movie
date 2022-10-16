@@ -12,9 +12,6 @@ import RecomandationPage from "./pages/RecomandationPage";
 class App extends Component {
   constructor(data) {
     super(data);
-    this.state = {
-      msg: "This is my first component",
-    };
   }
   render() {
     return (
@@ -33,9 +30,11 @@ class App extends Component {
             <Route path="/signup" exact>
               <SignUpPage />
             </Route>
-            <Route path="/recomandation" exact>
-              <RecomandationPage />
-            </Route>
+            <Route
+              path="/recomandation"
+              component={RecomandationPage}
+              exact
+            ></Route>
           </Switch>
         </BrowserRouter>
       </div>

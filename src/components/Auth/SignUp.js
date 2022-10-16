@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from "react";
+import { useState, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./AuthForm.css";
 import { useDispatch } from "react-redux";
@@ -14,14 +14,10 @@ const SignUp = () => {
   const genderInputRef = useRef();
   const ageInputRef = useRef();
 
-  //   const authCtx = useContext(AuthContext);
-
-  const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
 
   const submitHandler = (event) => {
     event.preventDefault();
-  // dispatch(authSlice.login());
 
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
@@ -60,12 +56,8 @@ const SignUp = () => {
       })
       .then((data) => {
         dispatch(login());
+        localStorage.setItem('authentication', true);
         history.replace("/");
-        const expirationTime = new Date(
-          new Date().getTime() + +data.expiresIn * 1000
-        );
-        // authCtx.login(data.idToken, expirationTime.toISOString());
-        // history.replace('/');
       })
       .catch((err) => {
         alert(err.message);
