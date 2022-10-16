@@ -11,7 +11,10 @@ const DetailsMovieSelected = () => {
   const [starring, setStarring] = useState();
   const [content, setContent] = useState();
   const [runtime, setRuntime] = useState();
-  fetch(`http://localhost:3000/movie/${params.id}`, {
+
+  let id = JSON.parse(localStorage.getItem("similar"));
+
+  fetch(`http://localhost:3000/movie/${params.id ? params.id : id[0].id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

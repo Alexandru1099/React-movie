@@ -33,6 +33,7 @@ const ListMovie = () => {
   function ceva(e) {
     dispatch(addWatchList(e));
   }
+  localStorage.setItem("similar", JSON.stringify(movies));
   return (
     <div className="p-5">
       {message == 0 ? (
